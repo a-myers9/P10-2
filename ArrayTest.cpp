@@ -39,7 +39,7 @@ bool hasAdjacentDuplicates(int values[], int size) {
 // Returns true if any two elements are equal, adjacent or not
 bool hasDuplicates(int values[], int size) {
 	for (int i = 0; i < size; i++) {
-		for (int j = 1 + 1; j < size; j++) {
+		for (int j = i + 1; j < size; j++) {
 			if (values[i] == values[j]) {
 				return true;
 			}
@@ -63,7 +63,7 @@ void testHarness(void) {
 	int t2[] = { 7 };
 	int t3[] = { 2, 1, 2 };
 	int t4[] = { 1, 2, 3, 4, 5, 0 };
-	int t5[] = { 5, 4, 3, 2, 1, 0 };
+	int t5[] = { 5, 4, 3, 2, 1, 9 };
 	int t6[] = { 1, 2, 3, 4, 5, 5 };
 
 	runTest(t1, 3);
