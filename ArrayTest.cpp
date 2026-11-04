@@ -90,6 +90,4 @@ int main(void) {
 	cout << "The data " << (hasDuplicates(data, N) ? "has" : "does not have") << " duplicates." << endl;
 
 	return 0;
-
-
 }
