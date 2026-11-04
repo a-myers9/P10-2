@@ -74,6 +74,12 @@ void testHarness(void) {
 	runTest(t6, 5);
 }
 
+//int main(void) {
+	//testHarness();
+
+	//return 0;
+//}
+
 int main(void) {
 	//Step 2: read size integers with a loop, then report 
 	const int N = 6;
@@ -84,10 +90,11 @@ int main(void) {
 	}
 
 	// Operator
-	cout << "The data are " << (isSortedIncreasing( data, N) ? "" : "not ") << "increasing." << endl;
-	cout << "The data are " << (isSortedDecreasing( data, N) ? "" : "not ") << "decreasing." << endl;
-	cout << "The data " << (hasAdjacentDuplicates( data, N) ? "has" : "does not have") << " adjacent duplicates." << endl;
+	cout << "The data are " << (isSortedIncreasing(data, N) ? "" : "not ") << "increasing." << endl;
+	cout << "The data are " << (isSortedDecreasing(data, N) ? "" : "not ") << "decreasing." << endl;
+	cout << "The data " << (hasAdjacentDuplicates(data, N) ? "has" : "does not have") << " adjacent duplicates." << endl;
 	cout << "The data " << (hasDuplicates(data, N) ? "has" : "does not have") << " duplicates." << endl;
 
 	return 0;
 }
+
