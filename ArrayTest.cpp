@@ -1,6 +1,6 @@
 // ArrayTest.cpp - Anna Myers - November 2, 2026
 // Description: Four array functions that examine a passed array of ints, plus a 
-// test harness(step 1) and input loop (step 2)
+// test harness (step 1) and input loop (step 2)
 
 #include <iostream>
 using namespace std;
