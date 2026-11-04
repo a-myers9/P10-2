@@ -75,60 +75,21 @@ void testHarness(void) {
 }
 
 int main(void) {
-	//
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-void displayRun(int values[], int size) {
-	for (int i = 0; i < size; i++) {
-		// Compare with neighbors, check bounds first
-		bool sameAsPrev = (i > 0 && values[i] == values[i - 1]);
-		bool sameAsNext = (i < size - 1 && values[i] == values[i + 1]);
-
-		if (i > 0)
-			cout << " ";
-		if (!sameAsPrev && sameAsNext)
-			cout << "(";
-		cout << values[i];
-		if (sameAsPrev && !sameAsNext) 
-			cout << ")";
+	//Step 2: read size integers with a loop, then report 
+	const int N = 6;
+	int data[N];
+	for (int i = 0; i < N; i++) {
+		cout << "Enter integer #" << i << ": ";
+		cin >> data[i];
 	}
-	cout << endl;
 
-}
-// Returns true if any two adjacent values are equal
-bool hasRun(int values[], int size) {
-	for (int i = 0; i < size - 1; i++) {
-		if (values[i] == values[i + 1]) {
-			return true;
-		}
-	}
-	return false;
-}
+	// Operator
+	cout << "The data are " << (isSortedIncreasing( data, N) ? "" : "not ") << "increasing." << endl;
+	cout << "The data are " << (isSortedDecreasing( data, N) ? "" : "not ") << "decreasing." << endl;
+	cout << "The data " << (hasAdjacentDuplicates( data, N) ? "has" : "does not have") << " adjacent duplicates." << endl;
+	cout << "The data " << (hasDuplicates(data, N) ? "has" : "does not have") << " duplicates." << endl;
 
-// Step 1 Tests: Hard-coded arrays
-void testDisplayRun(void) {
-	int t1[] = { 1, 2, 3 }; // no run
-	int t2[] = { 2, 2 }; // whole array is run
-	int t3[] = { 4, 4, 1 }; // run at start
-	int t4[] = { 1, 5, 5 }; // run at end
-	int t5[] = { 6, 6, 6, 3, 3 }; // two runs touching
-	int t6[] = { 1, 2, 5, 5, 3, 1, 2, 4, 3, 2, 2, 2, 2, 3, 6, 5, 5, 6, 3, 1 }; // example trial
+	return 0;
 
-	displayRun(t1, 3); cout << "hasRun: " << boolalpha << hasRun(t1, 3) << endl;
-	cout << "hasRun: " << hasRun(t2, 2) << endl;
-	cout << "hasRun: " << 
+
 }
